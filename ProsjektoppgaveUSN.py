@@ -125,11 +125,11 @@ finn_intervall_vec = np.vectorize(finn_intervall)
 tidsintervaller = finn_intervall_vec(kl_slett)
 
 # Forekomster per intervall
-unikke, antall = np.unique(tidsintervaller, return_counts=True)
+unike, antall = np.unique(tidsintervaller, return_counts=True)
 
 # Behold rekkefølge fra etiketter
 teller = {k: 0 for k in etiketter}
-for u, a in zip(unikke, antall):
+for u, a in zip(unike, antall):
     if u in teller:
         teller[u] = a
 
